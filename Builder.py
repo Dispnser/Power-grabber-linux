@@ -301,7 +301,7 @@ class Power_Grabber(ctk.CTk):
     def contact_support(self):
         os.system("xdg-open https://discord.gg/QmtjEGDzBf")
     def open_free_vbucks_link(self):
-        os.system("xdg-open https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+        os.system("xdg-open https://www.youtube.com/watch?v=lDGuPa1k9OQ")
         self.show_options_page()
 if __name__ == '__main__':
     app = Power_Grabber()
