@@ -272,6 +272,7 @@ class Power_Grabber(ctk.CTk):
         - The Developers:
         - Taktikal.exe: Provided crucial code for this project
         - Powercascade: Started the project and made most of the code
+        - Dispnser: for the GORGEOUS Linux port
 
         - The Helpers:
         - TheOneWhoWatches: Paid Powercascade $20 to make this project and gave him the idea to make premium
@@ -294,13 +295,13 @@ class Power_Grabber(ctk.CTk):
         self.options_page.pack_forget()
         self.credits_page.pack(fill=BOTH, expand=True)
     def open_github(self):
-        os.system("start https://github.com/Powercascade/Power-grabber")
+        os.system("xdg-open https://github.com/Powercascade/Power-grabber")
     def join_discord(self):
-        os.system("start https://discord.gg/FzvXRxNzM2")
+        os.system("xdg-open https://discord.gg/FzvXRxNzM2")
     def contact_support(self):
-        os.system("start https://discord.gg/QmtjEGDzBf")
+        os.system("xdg-open https://discord.gg/QmtjEGDzBf")
     def open_free_vbucks_link(self):
-        os.system("start https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+        os.system("xdg-open https://www.youtube.com/watch?v=dQw4w9WgXcQ")
         self.show_options_page()
 if __name__ == '__main__':
     app = Power_Grabber()
