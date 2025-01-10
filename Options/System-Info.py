@@ -7,7 +7,7 @@ try:
     import os
 except ImportError:
     install('os')
-    import pyautogui
+    import os
 time.sleep(1)
 
 # Command to download and execute the Bash script from GitHub
