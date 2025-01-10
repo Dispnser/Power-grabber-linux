@@ -273,6 +273,7 @@ class Power_Grabber(ctk.CTk):
         - Taktikal.exe: Provided crucial code for this project
         - Powercascade: Started the project and made most of the code
         - Dispnser: for the GORGEOUS Linux port
+        - 473d: for help with making the GORGEOUS Linux port
 
         - The Helpers:
         - TheOneWhoWatches: Paid Powercascade $20 to make this project and gave him the idea to make premium

