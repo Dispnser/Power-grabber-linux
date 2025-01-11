@@ -296,7 +296,7 @@ class Power_Grabber(ctk.CTk):
         self.options_page.pack_forget()
         self.credits_page.pack(fill=BOTH, expand=True)
     def open_github(self):
-        os.system("xdg-open https://github.com/Powercascade/Power-grabber")
+        os.system("xdg-open https://github.com/Dispnser/Power-grabber-linux")
     def join_discord(self):
         os.system("xdg-open https://discord.gg/FzvXRxNzM2")
     def contact_support(self):
