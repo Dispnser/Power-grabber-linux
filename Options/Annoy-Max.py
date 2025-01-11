@@ -1,4 +1,10 @@
-import pulsectl
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+try:
+    import pulsectl
+except ImportError:
+    install('pulsectl')
+    import pulsectl
 
 # Create a PulseAudio controller
 with pulsectl.Pulse('volume-control') as pulse:
