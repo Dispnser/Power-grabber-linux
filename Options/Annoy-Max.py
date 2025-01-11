@@ -1,7 +1,11 @@
-from ctypes import cast, POINTER
-from comtypes import CLSCTX_ALL
-from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
-devices = AudioUtilities.GetSpeakers()
-interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
-volume = cast(interface, POINTER(IAudioEndpointVolume))
-volume.SetMasterVolumeLevelScalar(1.0, None)
+import pulsectl
+
+# Create a PulseAudio controller
+with pulsectl.Pulse('volume-control') as pulse:
+    # Get all sinks (output devices)
+    sinks = pulse.sink_list()
+    if sinks:
+        # Set the volume to maximum (1.0) for the first sink
+        pulse.volume_set_all_chans(sinks[0], 1.0)
+    else:
+        print("No sinks found")
