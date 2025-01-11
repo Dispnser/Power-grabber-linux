@@ -57,7 +57,7 @@ system_info_text+="**OS Architecture:** $os_arch\n"
 system_info_text+="**Screen Resolution:** $screen_resolution\n"
 system_info_text+="**CPU Info:** $cpu_info\n"
 system_info_text+="**Total RAM:** $total_ram\n"
-system_info_text+="**Disk Usage:** $disk_usage\n"
+system_info_text+="**Disk space left:** $disk_usage\n"
 system_info_text+="**Local IP Address:** $local_ip\n"
 system_info_text+="**Public IP Address:** $public_ip\n"
 
