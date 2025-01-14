@@ -19,7 +19,7 @@ class Power_Grabber(ctk.CTk):
         self.sidebar = ctk.CTkFrame(self, width=300, fg_color='#212127', corner_radius=0)
         self.sidebar.pack(side=RIGHT, fill=Y)
         url = "https://github.com/Powercascade/Power-grabber/blob/main/Power%20Grabber.png?raw=true"
-        ur ="https://github.com/Powercascade/Power-grabber/blob/main/github.png?raw=true"
+        ur ="https://github.com/Powercascade/Power-grabber/blob/main/git.png?raw=true"
         u = "https://github.com/Powercascade/Power-grabber/blob/main/discord-logo.png?raw=true"
         URL = "https://github.com/Powercascade/Power-grabber/blob/main/settings.png?raw=true"
         response = requests.get(url)

