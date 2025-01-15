@@ -1,0 +1,16 @@
+certifi==2024.12.14
+cffi==1.17.1
+charset-normalizer==3.4.1
+cryptography==44.0.0
+customtkinter==5.2.2
+darkdetect==0.8.0
+geographiclib==2.0
+geopy==2.4.1
+idna==3.10
+packaging==24.2
+pillow==11.1.0
+pycparser==2.22
+pyperclip==1.9.0
+requests==2.32.3
+tk==0.1.0
+urllib3==2.3.0
