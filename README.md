@@ -8,7 +8,7 @@
 </p>
 
 ## <h2>🚀 Description</h2>
-**Power Grabber** is a free, open-source Discord grabber. The grabber provides multiple utilities for data extraction. We also host **bimonthly premium giveaways** for our community.
+**Power Grabber** is a free, open-source Discord grabber. The grabber provides multiple utilities for data extraction. Unlike the windows counterpart we are absolutely **FOSS**
 
 ---
 
